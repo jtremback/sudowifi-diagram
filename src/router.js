@@ -1,10 +1,9 @@
 import React from 'react'
-// viewBox="-1419 -226 3233 3493" 
-export function Router() {
+
+export function Router(connections) {
     return (
-        <svg width="1000px" height="500px" viewBox="0 0 1000 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+        <svg width="1000px" height="615px" viewBox="0 0 1000 615" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
             <title>router</title>
-            <desc>Created with Sketch.</desc>
             <defs>
                 <path d="M557,311 L557,273.900998 C466.524573,258.189565 373.468674,250 278.5,250 C183.531326,250 90.4754269,258.189565 -5.68434189e-14,273.900998 L0,372 L515,372 L515,311 L557,311 Z M0,311 L43,311 L43,372 L0,372 L0,311 Z" id="path-1"></path>
                 <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="557" height="122" fill="white">
@@ -41,25 +40,53 @@ export function Router() {
             </defs>
             <g id="layout" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <g id="router">
-                    <g>
-                        <rect id="Rectangle" x="0" y="0" width="1000" height="500"></rect>
-                        <g id="body" transform="translate(221.000000, 10.000000)" stroke="#000000" strokeWidth="6" fill="#656565">
-                            <use id="Combined-Shape" mask="url(#mask-2)" xlinkHref="#path-1"></use>
-                            <use id="Rectangle-11" mask="url(#mask-4)" xlinkHref="#path-3"></use>
-                            <use id="Rectangle-11" mask="url(#mask-6)" xlinkHref="#path-5"></use>
-                        </g>
-                        <g id="wan" transform="translate(454.000000, 312.000000)">
-                            <rect id="Rectangle-10" fill="#3C71FF" x="0" y="0" width="43" height="44" rx="3"></rect>
-                            <use id="Combined-Shape" stroke="#000000" mask="url(#mask-8)" strokeWidth="2" fill="#D1E8F8" xlinkHref="#path-7"></use>
-                        </g>
-                        <g id="ports" transform="translate(511.000000, 312.000000)">
-                            <rect id="Rectangle-10" fill="#FDFD20" x="0" y="0" width="160" height="44" rx="3"></rect>
-                            <use id="Combined-Shape" stroke="#000000" mask="url(#mask-10)" strokeWidth="2" fill="#C8C8C8" xlinkHref="#path-9"></use>
-                            <use id="Combined-Shape" stroke="#000000" mask="url(#mask-12)" strokeWidth="2" fill="#373737" xlinkHref="#path-11"></use>
-                            <use id="Combined-Shape" stroke="#000000" mask="url(#mask-14)" strokeWidth="2" fill="#DA3030" xlinkHref="#path-13"></use>
-                            <use id="Combined-Shape" stroke="#000000" mask="url(#mask-16)" strokeWidth="2" fill="#11A81C" xlinkHref="#path-15"></use>
-                        </g>
+                    <rect id="Rectangle" x="0" y="0" width="1000" height="500"></rect>
+                    <g id="body" transform="translate(221.000000, 10.000000)" stroke="#000000" strokeWidth="6" fill="#656565">
+                        <use id="Combined-Shape" mask="url(#mask-2)" xlinkHref="#path-1"></use>
+                        <use id="Rectangle-11" mask="url(#mask-4)" xlinkHref="#path-3"></use>
+                        <use id="Rectangle-11" mask="url(#mask-6)" xlinkHref="#path-5"></use>
                     </g>
+                    <g id="wan" transform="translate(454.000000, 312.000000)">
+                        <rect id="Rectangle-10" fill="#3C71FF" x="0" y="0" width="43" height="44" rx="3"></rect>
+                        <use id="Combined-Shape" stroke="#000000" mask="url(#mask-8)" strokeWidth="2" fill="#D1E8F8" xlinkHref="#path-7"></use>
+                    </g>
+                    <g id="ports" transform="translate(511.000000, 312.000000)">
+                        <rect id="Rectangle-10" fill="#FDFD20" x="0" y="0" width="160" height="44" rx="3"></rect>
+                        <use id="Combined-Shape" stroke="#000000" mask="url(#mask-10)" strokeWidth="2" fill="#C8C8C8" xlinkHref="#path-9"></use>
+                        <use id="Combined-Shape" stroke="#000000" mask="url(#mask-12)" strokeWidth="2" fill="#373737" xlinkHref="#path-11"></use>
+                        <use id="Combined-Shape" stroke="#000000" mask="url(#mask-14)" strokeWidth="2" fill="#DA3030" xlinkHref="#path-13"></use>
+                        <use id="Combined-Shape" stroke="#000000" mask="url(#mask-16)" strokeWidth="2" fill="#11A81C" xlinkHref="#path-15"></use>
+                    </g>
+                    {true &&
+                        <g id="Cable4" transform="translate(775.000000, 465.500000) scale(-1, 1) translate(-775.000000, -465.500000) translate(650.000000, 331.000000)" strokeLinecap="round">
+                            <path d="M249.196958,0 L0,268.627898" id="Line" stroke="#000000" strokeWidth="17"></path>
+                            <path d="M249.196958,0 L0,268.627898" id="Line" stroke="#DA3131" strokeWidth="15"></path>
+                        </g>
+                    }
+                    {connections[3] &&
+                        <g id="Cable3" transform="translate(649.000000, 464.000000) scale(-1, 1) translate(-649.000000, -464.000000) translate(611.000000, 331.000000)" strokeLinecap="round">
+                            <path d="M75.7558753,0 L0,265.632048" id="Line" stroke="#000000" strokeWidth="17"></path>
+                            <path d="M75.7558753,0 L0,265.632048" id="Line" stroke="#11A81C" strokeWidth="15"></path>
+                        </g>
+                    }
+                    {connections[2] &&
+                        <g id="Cable2" transform="translate(500.000000, 331.000000)" strokeLinecap="round">
+                            <path d="M71.8395208,0 L0.310024709,268.6845" id="Line" stroke="#000000" strokeWidth="17"></path>
+                            <path d="M71.8395208,0 L0.310024709,268.6845" id="Line" stroke="#D4D4D4" strokeWidth="15"></path>
+                        </g>
+                    }
+                    {connections[1] &&
+                        <g id="Cable1" transform="translate(300.000000, 331.000000)" strokeLinecap="round">
+                            <path d="M231.4829,0 L0.998968506,268.6845" id="Line" stroke="#000000" strokeWidth="17"></path>
+                            <path d="M231.4829,0 L0.998968506,268.6845" id="Line" stroke="#D4D4D4" strokeWidth="15"></path>
+                        </g>
+                    }
+                    {connections[0] && 
+                        <g id="Cable0" transform="translate(100.000000, 331.000000)" strokeLinecap="round">
+                            <path d="M375,0 L0.575153374,268.199405" id="Line" stroke="#000000" strokeWidth="17"></path>
+                            <path d="M375,0 L0.575153374,268.199405" id="Line" stroke="#D1E8F8" strokeWidth="15"></path>
+                        </g>
+                    }
                 </g>
             </g>
         </svg>

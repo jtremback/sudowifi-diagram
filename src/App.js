@@ -1,20 +1,13 @@
-import React, { Component } from 'react'
-import logo from './logo.svg'
+import React from 'react'
 import './App.css'
 import { Router } from './router.js'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <Router/>
-      </div>
-    )
-  }
+function App() {
+  return (
+    <div className="App">
+      <Router connections={{0: true, 3: true}}/>
+    </div>
+  )
 }
 
 export default App
