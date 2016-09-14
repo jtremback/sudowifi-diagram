@@ -39,7 +39,7 @@ export function Router({ connections }) {
           <use xlinkHref="#path-15"></use>
         </mask>
       </defs>
-      <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fill-rule="evenodd">
+      <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g id="router">
           <g transform="translate(0.000000, -200.000000)">
             <g id="body" transform="translate(221.000000, 200.000000)" stroke="#000000" strokeWidth="6" fill="#656565">

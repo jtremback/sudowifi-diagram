@@ -1,40 +1,41 @@
 import React from 'react'
 
-export function ConnectionBox ({ devices }) {
+export function ConnectionBox ({ deviceIcons, connectionIcon }) {
   return (
       <div style={{ position: "relative" }}>
         <div style={{
             backgroundColor: "rgba(0,0,254,.5)",
             width: 200,
             height: 300
-        }}></div>
+        }}>{ connectionIcon }</div>
             <div style={{
                 position: "absolute",
                 top: 200,
-                width: 200,
             }}>
                 <DeviceBox 
-                    devices={[true,true,true,true]}
+                    deviceIcons={deviceIcons}
                 ></DeviceBox>
             </div>
       </div>
   )
 }
 
-export function DeviceBox ({devices}) {
+export function DeviceBox ({ deviceIcons }) {
     return (
         <div style={{
-            // display: "flex",
-            // flexWrap: "wrap",
+            width: 200,
+            textAlign: "center",
         }}>
         {
-            devices.map(device => (
-                <div style={{
+            deviceIcons.map((deviceIcon, i) => (
+                <div key={i} style={{
                     background: "rgba(254,0,0,.5)",
                     width: 100,
                     height: 100,
                     display: "inline-block"
-                }}></div>
+                }}>
+                    { deviceIcon.type }
+                </div>
             ))
         }
         </div>
