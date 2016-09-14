@@ -6,25 +6,27 @@ import './index.css';
 let example = {
   ports: {
     0: {
-      connectionIcon: "internet tunnel",
+      connectionIcon: "internet_tunnel",
       cableType: "tunnel",
       deviceIcons: [
         {
-          type: "local mesh",
+          type: "localmesh",
           internet: true
         }
       ]
     },
     2: {
-      connectionIcon: "Ubiqiti 380",
+      connectionIcon: "nano_beam",
       cableType: "extender",
       deviceIcons: [
         {
-          type: "public client",
+          type: "client",
+          network: "Public",
           number: 3
         },
         {
-          type: "private client",
+          type: "client",
+          network: "Private",
           number: 3
         },
       ]
@@ -34,12 +36,13 @@ let example = {
     0: {
       deviceIcons: [
         {
-          type: "public client",
+          type: "client",
+          network: "public",
           number: 3
         },
         {
-          type: "sudomesh",
-          internet: true
+          type: "localmesh",
+          internet: false
         }
       ]
     },

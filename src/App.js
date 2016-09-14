@@ -1,6 +1,7 @@
 import React from 'react'
 import { Router } from './router.js'
-import { ConnectionBox, DeviceBox } from './connectionBox.js'
+import { ConnectionBox } from './ConnectionBox.js'
+import { DeviceBox } from './DeviceBox.js'
 
 function App({ ports, radios }) {
   return (
@@ -8,13 +9,7 @@ function App({ ports, radios }) {
       width: 1000,
       position: "relative"
     }}>
-      <Router connections={{
-        0: ports[0],
-        1: ports[1],
-        2: ports[2],
-        3: ports[3],
-        4: ports[4]
-      }}/>
+      <Router ports={ports} />
       
       { radios[0] &&
       <div style={{
