@@ -6,17 +6,16 @@ import './index.css';
 let example = {
   ports: {
     0: {
-      connectionIcon: "internet_tunnel",
+      connectionIcon: "internetTunnel",
       cableType: "tunnel",
       deviceIcons: [
         {
-          type: "localmesh",
-          internet: true
+          type: "meshExit"
         }
       ]
     },
     2: {
-      connectionIcon: "nano_beam",
+      connectionIcon: "nanoBeam",
       cableType: "extender",
       deviceIcons: [
         {
@@ -27,7 +26,7 @@ let example = {
         {
           type: "client",
           network: "Private",
-          number: 3
+          number: 12
         },
       ]
     }

@@ -36,19 +36,3 @@ export function Router ({ports}) {
 Router.propTypes = {
     ports: React.PropTypes.object
 }
-            // <img style={{
-            //     position: "absolute",
-            //     top: 234
-            // }} src={cable1} />
-            // <img style={{
-            //     position: "absolute",
-            //     top: 234
-            // }} src={cable2} />
-            // <img style={{
-            //     position: "absolute",
-            //     top: 234
-            // }} src={cable3} />
-            // <img style={{
-            //     position: "absolute",
-            //     top: 234
-            // }} src={cable4} />

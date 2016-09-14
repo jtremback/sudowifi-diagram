@@ -2,17 +2,19 @@ import React from 'react'
 
 import client from './device-icons/client.svg'
 import localmesh from './device-icons/localmesh.svg'
-import localmesh_no_internet from './device-icons/localmesh_no_internet.svg'
-import mesh_exit from './device-icons/mesh_exit.svg'
-import unknown_device from './device-icons/unknown_device.svg'
+import localmeshNoInternet from './device-icons/localmeshNoInternet.svg'
+import meshExit from './device-icons/meshExit.svg'
+import unknownDevice from './device-icons/unknownDevice.svg'
+
+import { labelText } from './styles.js'
 
 let icons = {
-    mesh_exit: {
-        file: mesh_exit,
+    meshExit: {
+        file: meshExit,
         title: "Mesh Exit Server"
     },
-    unknown_device: {
-        file: unknown_device,
+    unknownDevice: {
+        file: unknownDevice,
         title: "Unknown Device"
     },
 }
@@ -26,7 +28,7 @@ function renderIcon (icon) {
             }
         } else {
             return {
-                file: localmesh_no_internet,
+                file: localmeshNoInternet,
                 title: "Local Mesh, no Internet"
             }
         }
@@ -57,10 +59,11 @@ export function DeviceBox ({ deviceIcons }) {
                 return <div key={i} style={{
                     width: 100,
                     height: 100,
-                    display: "inline-block"
+                    display: "inline-block",
+                    position: "relative"
                 }}>
-                    <img style={{ position: "absolute" }} src={icon.file} />
-                    { icon.title }
+                    <img style={{ position: "absolute", top: 0, left: 0 }} src={icon.file} />
+                    <div style={{ position: "absolute", top: 65, left: 0, ...labelText }}>{ icon.title }</div>
                 </div>
             })
         }

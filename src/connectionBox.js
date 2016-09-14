@@ -1,48 +1,47 @@
 import React from 'react'
 import { DeviceBox } from './DeviceBox.js'
 
-import internet_tunnel from './connection-icons/internet_tunnel.svg'
-import nano_bridge from './connection-icons/nano_bridge.svg'
-import nano_beam from './connection-icons/nano_beam.svg'
-import nano_station from './connection-icons/nano_station.svg'
-import public_ethernet from './connection-icons/public_ethernet.svg'
-import private_ethernet from './connection-icons/private_ethernet.svg'
+import internetTunnel from './connection-icons/internetTunnel.svg'
+import nanoBridge from './connection-icons/nanoBridge.svg'
+import nanoBeam from './connection-icons/nanoBeam.svg'
+import nanoStation from './connection-icons/nanoStation.svg'
+import publicEthernet from './connection-icons/publicEthernet.svg'
+import privateEthernet from './connection-icons/privateEthernet.svg'
 
 import { labelText } from './styles.js'
 
 let icons = {
-    internet_tunnel: {
-        file: internet_tunnel,
+    internetTunnel: {
+        file: internetTunnel,
         title: "Internet Tunnel"
     },
-    nano_bridge: {
-        file: nano_bridge,
+    nanoBridge: {
+        file: nanoBridge,
         title: "Ubiquiti NanoBridge"
     },
-    nano_beam: {
-        file: nano_beam,
+    nanoBeam: {
+        file: nanoBeam,
         title: "Ubiquiti NanoBeam"
     },
-    nano_station: {
-        file: nano_station,
+    nanoStation: {
+        file: nanoStation,
         title: "Ubiquiti NanoStation"
     },
-    public_ethernet: {
-        file: public_ethernet,
+    publicEthernet: {
+        file: publicEthernet,
         title: "Public Ethernet"
     },
-    private_ethernet: {
-        file: private_ethernet,
+    privateEthernet: {
+        file: privateEthernet,
         title: "Private Ethernet"
     },
 }
 
 export function ConnectionBox ({ deviceIcons, connectionIcon }) {
-    debugger
   return (
       <div style={{ position: "relative" }}>
         <img style={{ position: "absolute" }} src={icons[connectionIcon].file} />
-        <div style={{ position: "absolute", top: 130, width: 200, textAlign: "center", ...labelText }}>{icons[connectionIcon].title}</div>
+        <div style={{ position: "absolute", top: 130, width: 200, ...labelText }}>{icons[connectionIcon].title}</div>
         <div style={{ position: "absolute", top: 200 }}>
             <DeviceBox deviceIcons={deviceIcons} />
         </div>
