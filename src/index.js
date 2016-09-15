@@ -14,19 +14,14 @@ let example = {
         }
       ]
     },
-    2: {
-      connectionIcon: "nanoBeam",
-      cableType: "extender",
+    3: {
+      connectionIcon: "publicEthernet",
+      cableType: "public",
       deviceIcons: [
         {
           type: "client",
           network: "Public",
           number: 3
-        },
-        {
-          type: "client",
-          network: "Private",
-          number: 12
         },
       ]
     }

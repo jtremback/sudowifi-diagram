@@ -29,11 +29,11 @@ let icons = {
     },
     publicEthernet: {
         file: publicEthernet,
-        title: "Public Ethernet"
+        title: "Public Network"
     },
     privateEthernet: {
         file: privateEthernet,
-        title: "Private Ethernet"
+        title: "Private Network"
     },
 }
 
