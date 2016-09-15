@@ -25,7 +25,7 @@ export function Router ({ ports }) {
                 position: "absolute"
             }} src={router} />
             {
-                Object.keys(ports).map(key => <img style={{
+                Object.keys(ports).map(key => <img key={key} style={{
                     position: "absolute",
                     top: 234
                 }} src={cables[key]} />)

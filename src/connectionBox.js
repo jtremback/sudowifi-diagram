@@ -2,11 +2,13 @@ import React from 'react'
 import { DeviceBox } from './DeviceBox.js'
 
 import internetTunnel from './connection-icons/internetTunnel.svg'
-import nanoBridge from './connection-icons/nanoBridge.svg'
-import nanoBeam from './connection-icons/nanoBeam.svg'
-import nanoStation from './connection-icons/nanoStation.svg'
 import publicEthernet from './connection-icons/publicEthernet.svg'
 import privateEthernet from './connection-icons/privateEthernet.svg'
+
+// There was some Sketch bug with pngs in svgs, so I exported these three as straight png.
+import nanoBridge from './connection-icons/nanoBridge.png'
+import nanoBeam from './connection-icons/nanoBeam.png'
+import nanoStation from './connection-icons/nanoStation.png'
 
 import { labelText } from './styles.js'
 
@@ -46,11 +48,11 @@ let files = {
     privateEthernet,
 }
 
-export function ConnectionBox ({ deviceIcons, connectionIcon, portName }) {
+export function ConnectionBox ({ deviceIcons, connectionIcon, name }) {
   return (
       <div style={{ position: "relative" }}>
         <img style={{ position: "absolute" }} src={icons[connectionIcon].file} />
-        <div style={{ position: "absolute", top: 140, width: 200, ...labelText, background: "rgba(254,254,254,0.7)" }}>{`Connected over ${icons[connectionIcon].title} on ${portName}`}</div>
+        <div style={{ position: "absolute", top: 140, width: 200, ...labelText, background: "rgba(254,254,254,0.7)" }}>{`Connected over ${icons[connectionIcon].title} on ${name}`}</div>
         <div style={{ position: "absolute", top: 200 }}>
             <DeviceBox deviceIcons={deviceIcons} />
         </div>

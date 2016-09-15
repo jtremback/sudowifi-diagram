@@ -6,35 +6,55 @@ import './index.css';
 let example = {
   ports: {
     0: {
-      portName: "WAN port",
+      name: "WAN port",
       connectionIcon: "internetTunnel",
-      cableType: "tunnel",
       deviceIcons: [
         {
           type: "meshExit"
         }
       ]
     },
-    3: {
-      portName: "port 3",
-      connectionIcon: "publicEthernet",
-      cableType: "public",
+    1: {
+      name: "port 1",
+      connectionIcon: "nanoStation",
       deviceIcons: [
         {
           type: "client",
           network: "Public",
-          number: 3
-        },
-                {
+          number: 2
+        }
+      ]
+    },
+    2: {
+      name: "port 2",
+      connectionIcon: "nanoBeam",
+      deviceIcons: [
+        {
+          type: "localmesh",
+          internet: true
+        }
+      ]
+    },
+    3: {
+      name: "port 3",
+      connectionIcon: "publicEthernet",
+      deviceIcons: [
+        {
           type: "client",
           network: "Public",
-          number: 3
-        },
-                {
+          number: 2
+        }
+      ]
+    },
+    4: {
+      name: "port 4",
+      connectionIcon: "privateEthernet",
+      deviceIcons: [
+        {
           type: "client",
-          network: "Public",
-          number: 3
-        },
+          network: "Private",
+          number: 1
+        }
       ]
     }
   },
