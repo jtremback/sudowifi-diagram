@@ -6,6 +6,7 @@ import './index.css';
 let example = {
   ports: {
     0: {
+      portName: "WAN port",
       connectionIcon: "internetTunnel",
       cableType: "tunnel",
       deviceIcons: [
@@ -15,10 +16,21 @@ let example = {
       ]
     },
     3: {
+      portName: "port 3",
       connectionIcon: "publicEthernet",
       cableType: "public",
       deviceIcons: [
         {
+          type: "client",
+          network: "Public",
+          number: 3
+        },
+                {
+          type: "client",
+          network: "Public",
+          number: 3
+        },
+                {
           type: "client",
           network: "Public",
           number: 3

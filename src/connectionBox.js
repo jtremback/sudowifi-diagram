@@ -37,11 +37,20 @@ let icons = {
     },
 }
 
-export function ConnectionBox ({ deviceIcons, connectionIcon }) {
+let files = {
+    internetTunnel,
+    nanoBridge,
+    nanoBeam,
+    nanoStation,
+    publicEthernet,
+    privateEthernet,
+}
+
+export function ConnectionBox ({ deviceIcons, connectionIcon, portName }) {
   return (
       <div style={{ position: "relative" }}>
         <img style={{ position: "absolute" }} src={icons[connectionIcon].file} />
-        <div style={{ position: "absolute", top: 130, width: 200, ...labelText }}>{icons[connectionIcon].title}</div>
+        <div style={{ position: "absolute", top: 140, width: 200, ...labelText, background: "rgba(254,254,254,0.7)" }}>{`Connected over ${icons[connectionIcon].title} on ${portName}`}</div>
         <div style={{ position: "absolute", top: 200 }}>
             <DeviceBox deviceIcons={deviceIcons} />
         </div>
