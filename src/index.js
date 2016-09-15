@@ -40,6 +40,7 @@ let example = {
   },
   radios: {
     0: {
+      name: "2.4ghz radio", 
       deviceIcons: [
         {
           type: "client",
@@ -53,6 +54,7 @@ let example = {
       ]
     },
     1: {
+      name: "5ghz radio",
       deviceIcons: []
     }
   }

@@ -3,6 +3,8 @@ import { Router } from './router.js'
 import { ConnectionBox } from './ConnectionBox.js'
 import { DeviceBox } from './DeviceBox.js'
 
+import { labelText } from './styles.js'
+
 function App({ ports, radios }) {
   return (
     <div style={{
@@ -21,7 +23,8 @@ function App({ ports, radios }) {
           ></DeviceBox>
       </div>
       }
-
+      <div style={{ ...labelText, position: "absolute", width: 200, top: 200, left: 0}}>{`Connected over ${radios[0].name}`}</div>
+      
       { radios[1] &&
       <div style={{
         position: "absolute",
@@ -33,6 +36,7 @@ function App({ ports, radios }) {
           ></DeviceBox>
       </div>
       }
+      <div style={{ ...labelText, position: "absolute", width: 200, top: 200, left: 0}}>{`Connected over ${radios[0].name}`}</div>
 
       { ports[0] &&
       <div style={{

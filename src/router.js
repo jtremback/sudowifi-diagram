@@ -8,6 +8,8 @@ import cable2 from './tp-link/cable2.svg'
 import cable3 from './tp-link/cable3.svg'
 import cable4 from './tp-link/cable4.svg'
 
+import { labelText } from './styles.js'
+
 let cables = {
     0: cable0,
     1: cable1,
@@ -16,13 +18,12 @@ let cables = {
     4: cable4,
 }
 
-export function Router ({ports}) {
+export function Router ({ ports }) {
     return (
         <div style={{ position: "relative" }}>
             <img style={{
                 position: "absolute"
             }} src={router} />
-
             {
                 Object.keys(ports).map(key => <img style={{
                     position: "absolute",
